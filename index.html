@@ -1,171 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Selah Farm | Southeast Michigan</title>
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
+  <meta name="description" content="Selah Farm LLC — Slow-grown vegetables, herbs, and flowers in Southeast Michigan. Establishing operational roots for our 2028 inaugural season." />
+
   <!-- Google Fonts: Bricolage Grotesque & Newsreader -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
 
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            morningsky: '#EEF1F5',
+            morningsky: '#A7C4C2',
             fieldgreen: '#4D6A48',
-            sungold: '#E5A04A',
+            sungold: '#D89E3A',
             ink: '#1D2433',
-            duskplum: '#6A4D6E',
+            duskplum: '#423843',
+            stonebg: '#F9F8F6'
           },
           fontFamily: {
-            heading: ['"Bricolage Grotesque"', 'sans-serif'],
-            serif: ['Newsreader', 'serif'],
+            sans: ['"Bricolage Grotesque"', 'sans-serif'],
+            serif: ['"Newsreader"', 'serif']
           }
         }
       }
     }
   </script>
 </head>
-<body class="bg-morningsky text-ink font-serif antialiased selection:bg-sungold selection:text-ink min-h-screen flex flex-col justify-between">
+<body class="bg-[#F9F8F6] text-ink font-serif antialiased selection:bg-morningsky selection:text-ink flex flex-col min-h-screen">
 
-  <!-- Navigation / Header -->
-  <header class="max-w-6xl w-full mx-auto px-6 py-8 flex justify-between items-center border-b border-ink/10">
-    <div class="flex items-center gap-3">
-      <span class="font-heading font-bold text-2xl tracking-tight text-ink">Selah Farm</span>
-      <span class="text-xs font-heading bg-fieldgreen/10 text-fieldgreen px-2.5 py-1 rounded-full font-medium uppercase tracking-wider">Est. 2026</span>
-    </div>
-    <div class="text-sm font-heading text-fieldgreen font-medium tracking-wide uppercase hidden sm:block">
-      Macomb County, MI
+  <!-- Header / Navigation -->
+  <header class="w-full border-b border-stone-200/80 bg-[#F9F8F6]/90 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <!-- Sunrise Emblem Logo -->
+        <svg class="w-7 h-7 text-fieldgreen transition-transform duration-300 group-hover:scale-105" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2v4M4.93 10.93l2.83 2.83M2 18h20M20 18a8 8 0 0 0-16 0"/>
+          <path d="M12 10a4 4 0 0 0-4 4h8a4 4 0 0 0-4-4z"/>
+        </svg>
+        <span class="font-sans font-bold text-lg tracking-tight text-ink">SELAH FARM</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 font-sans text-xs tracking-wider uppercase font-semibold text-stone-600">
+        <a href="#what-we-grow" class="hover:text-fieldgreen transition-colors">What We Grow</a>
+        <a href="#philosophy" class="hover:text-fieldgreen transition-colors">Philosophy</a>
+        <a href="#land-inquiry" class="hover:text-fieldgreen transition-colors">Land Inquiry</a>
+        <a href="#newsletter" class="hover:text-fieldgreen transition-colors">Connect</a>
+      </nav>
+
+      <a href="#newsletter" class="font-sans text-xs uppercase tracking-wider font-semibold px-4 py-2 rounded border border-fieldgreen text-fieldgreen hover:bg-fieldgreen hover:text-stonebg transition-colors">
+        Stay Informed
+      </a>
     </div>
   </header>
 
-  <!-- Main Content Container -->
   <main class="flex-grow">
-    
     <!-- Hero Section -->
-    <section class="max-w-6xl mx-auto px-6 py-16 md:py-24 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-      <div class="md:col-span-4 flex justify-center">
-        <!-- Logo Image File (ensure logo.png is saved in your root GitHub folder) -->
-        <img src="logo.png" alt="Selah Farm Emblem" class="w-64 md:w-full max-w-xs h-auto object-contain">
-      </div>
-      <div class="md:col-span-8 space-y-6 text-center md:text-left">
-        <div class="inline-block bg-sungold/15 text-ink font-heading text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">
-          Preparing for Inaugural 2028 Season
-        </div>
-        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-ink leading-tight">
-          Slow-grown vegetables, herbs, and flowers from a small farm in southeast Michigan.
+    <section class="max-w-5xl mx-auto px-6 pt-20 pb-16 text-center md:text-left">
+      <div class="max-w-3xl">
+        <span class="font-sans text-xs uppercase tracking-widest text-fieldgreen font-semibold">Macomb County, Michigan • EST. 2026</span>
+        <h1 class="font-sans text-4xl md:text-6xl font-bold tracking-tight text-ink mt-3 mb-6 leading-[1.15]">
+          A quiet pause for slow-grown vegetables, herbs, and flowers.
         </h1>
-        <p class="text-xl text-ink/80 max-w-2xl font-light leading-relaxed">
-          We grow the way we’d like you to eat: unhurried, and with attention. Rooted in soil health, heirloom genetics, and seasonal rhythm.
+        <p class="text-lg md:text-xl text-stone-700 leading-relaxed font-serif italic mb-8">
+          Establishing operational roots in Southeast Michigan. Preparing soil biology and infrastructure for our inaugural 2028 harvest season.
         </p>
+        <div class="flex flex-col sm:flex-row gap-4 items-center md:items-start">
+          <a href="#newsletter" class="w-full sm:w-auto text-center font-sans font-semibold text-sm px-6 py-3 rounded bg-fieldgreen text-stonebg hover:bg-[#3d5539] transition-colors">
+            Follow the Journey
+          </a>
+          <a href="#philosophy" class="w-full sm:w-auto text-center font-sans font-semibold text-sm px-6 py-3 rounded border border-stone-300 text-ink hover:border-ink transition-colors">
+            Our Philosophy
+          </a>
+        </div>
       </div>
     </section>
 
+    <!-- Divider -->
+    <div class="max-w-5xl mx-auto px-6"><hr class="border-stone-200" /></div>
+
     <!-- What We Grow Section -->
-    <section class="max-w-6xl mx-auto px-6 py-20 border-t border-ink/10">
-      <div class="mb-12 text-center md:text-left">
-        <h2 class="font-heading text-3xl md:text-4xl font-bold text-fieldgreen">What We Grow</h2>
-        <p class="text-ink/70 mt-2 text-lg">Harvested at peak flavor and fragrance in Southeast Michigan.</p>
+    <section id="what-we-grow" class="max-w-5xl mx-auto px-6 py-20">
+      <div class="mb-12">
+        <h2 class="font-sans text-2xl md:text-3xl font-bold tracking-tight text-ink">What We Grow</h2>
+        <p class="text-stone-600 font-serif italic text-base mt-1">Cultivated with care, harvested at seasonal peak.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white/60 p-8 rounded-xl border border-ink/5 shadow-sm">
-          <span class="font-heading text-xs uppercase tracking-widest text-duskplum font-bold">01</span>
-          <h3 class="font-heading text-2xl font-bold text-ink mt-2 mb-4">Vegetables</h3>
-          <p class="text-ink/80 text-base leading-relaxed">
-            Heirloom tomatoes, crisp radishes, vibrant leafy greens, and tender bush beans raised with deep attention to soil biology.
+        <div class="bg-white p-8 rounded-lg border border-stone-200/80 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-morningsky/20 text-fieldgreen flex items-center justify-center font-sans font-bold mb-4">01</div>
+          <h3 class="font-sans text-lg font-bold text-ink mb-2">Heirloom Vegetables</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Nutrient-dense varieties chosen for deep flavor and ecological resilience rather than shelf life or transport durability.
           </p>
         </div>
 
-        <div class="bg-white/60 p-8 rounded-xl border border-ink/5 shadow-sm">
-          <span class="font-heading text-xs uppercase tracking-widest text-duskplum font-bold">02</span>
-          <h3 class="font-heading text-2xl font-bold text-ink mt-2 mb-4">Culinary Herbs</h3>
-          <p class="text-ink/80 text-base leading-relaxed">
-            Fragrant basil, woody rosemary, earthy thyme, and bright mint cultivated for maximum essential oil density and aromatic power.
+        <div class="bg-white p-8 rounded-lg border border-stone-200/80 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-morningsky/20 text-fieldgreen flex items-center justify-center font-sans font-bold mb-4">02</div>
+          <h3 class="font-sans text-lg font-bold text-ink mb-2">Culinary & Medicinal Herbs</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Fresh and dried botanical herbs grown organically to enrich home kitchens and local wellness traditions.
           </p>
         </div>
 
-        <div class="bg-white/60 p-8 rounded-xl border border-ink/5 shadow-sm">
-          <span class="font-heading text-xs uppercase tracking-widest text-duskplum font-bold">03</span>
-          <h3 class="font-heading text-2xl font-bold text-ink mt-2 mb-4">Cut Flowers</h3>
-          <p class="text-ink/80 text-base leading-relaxed">
-            Seasonally harvested, chemical-free stems brought straight from field to bloom, reflecting the true cadence of our regional climate.
+        <div class="bg-white p-8 rounded-lg border border-stone-200/80 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-morningsky/20 text-fieldgreen flex items-center justify-center font-sans font-bold mb-4">03</div>
+          <h3 class="font-sans text-lg font-bold text-ink mb-2">Specialty Cut Flowers</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Seasonal stems and wild bloom arrangements grown without synthetic pesticides to bring regional beauty indoors.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Philosophy & Foundation Section -->
-    <section class="bg-fieldgreen text-morningsky py-20 px-6">
-      <div class="max-w-4xl mx-auto text-center space-y-8">
-        <span class="font-heading text-sungold text-xs uppercase tracking-widest font-bold">Our Philosophy & Foundation</span>
-        <h2 class="font-heading text-3xl md:text-5xl font-normal leading-snug">
-          <span class="italic font-serif">Selah</span> <span class="text-morningsky/70 text-2xl md:text-4xl">(SEE-lah)</span>: a pause. A word written in the margins of old songs, meaning stop and take this in.
-        </h2>
-        <div class="w-16 h-0.5 bg-sungold/50 mx-auto"></div>
-        <p class="text-morningsky/90 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
-          Established in 2026, Selah Farm is dedicated to science-backed soil health, high-density nutrition, and sustainable market gardening. We are spending 2026 and 2027 laying deep operational roots, acquiring farm acreage, and preparing for our inaugural 2028 growing season.
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="bg-stone-100/70 border-y border-stone-200 py-20">
+      <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="font-sans text-xs uppercase tracking-widest text-fieldgreen font-semibold">Rooted Intentions</span>
+          <h2 class="font-sans text-3xl font-bold tracking-tight text-ink mt-2 mb-6">
+            Selah: To pause, reflect, and grow deliberately.
+          </h2>
+          <p class="text-stone-700 leading-relaxed mb-4">
+            <em>Selah</em> is an ancient musical interlude—an intentional pause asking the listener to stop and rest. We apply this rhythm to food production, allowing soil biology to heal and crops to mature without rush or synthetic shortcuts.
+          </p>
+          <p class="text-stone-700 leading-relaxed">
+            Between now and our 2028 launch, we are dedicated to regenerative soil care, thoughtful ecosystem stewardship, and establishing community roots across Macomb County.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg border border-stone-200 space-y-6">
+          <div class="border-l-2 border-sungold pl-4">
+            <h4 class="font-sans font-bold text-sm text-ink">Soil Biology First</h4>
+            <p class="text-stone-600 text-xs mt-1">Living soil creates resilient plants. We prioritize compost, cover cropping, and minimal tillage.</p>
+          </div>
+          <div class="border-l-2 border-fieldgreen pl-4">
+            <h4 class="font-sans font-bold text-sm text-ink">Unhurried Quality</h4>
+            <p class="text-stone-600 text-xs mt-1">We honor natural growth cycles to deliver produce with natural vigor and exceptional taste.</p>
+          </div>
+          <div class="border-l-2 border-duskplum pl-4">
+            <h4 class="font-sans font-bold text-sm text-ink">Local Access</h4>
+            <p class="text-stone-600 text-xs mt-1">Direct community relationships guarantee fresh harvests with minimal food miles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Land Inquiry / Community Section -->
+    <section id="land-inquiry" class="max-w-5xl mx-auto px-6 py-20 text-center">
+      <div class="max-w-2xl mx-auto">
+        <span class="font-sans text-xs uppercase tracking-widest text-fieldgreen font-semibold">Community Partners</span>
+        <h2 class="font-sans text-3xl font-bold tracking-tight text-ink mt-2 mb-4">Securing Tillable Land in Macomb County</h2>
+        <p class="text-stone-600 leading-relaxed mb-8">
+          We are actively looking to lease or acquire 2 to 10 acres of tillable farmland in Southeast Michigan. If you have land leads or wish to collaborate on local agriculture, we welcome your correspondence.
         </p>
-      </div>
-    </section>
-
-    <!-- Land Availability / Outreach Section -->
-    <section class="max-w-4xl mx-auto px-6 py-20 my-12 bg-white/40 border border-ink/10 rounded-2xl text-center space-y-4">
-      <span class="font-heading text-duskplum text-xs font-bold uppercase tracking-widest">Land Acquisition</span>
-      <h3 class="font-heading text-2xl md:text-3xl font-bold text-ink">Seeking Tillable Acreage in Southeast Michigan</h3>
-      <p class="text-ink/80 max-w-2xl mx-auto leading-relaxed">
-        We are actively looking for tillable land available for lease or purchase in Macomb County and surrounding areas. If you own property or know of farmland suitable for sustainable crop production, we would love to connect.
-      </p>
-      <div class="pt-2">
-        <a href="mailto:hello@selahfarmmi.com?subject=Farmland%20Inquiry" class="inline-block font-heading text-sm font-semibold text-fieldgreen hover:text-ink underline underline-offset-4 transition-colors">
-          Contact Us About Land &rarr;
+        <a href="mailto:hello@selahfarmmi.com" class="inline-flex items-center gap-2 font-sans font-semibold text-sm px-6 py-3 rounded border border-ink text-ink hover:bg-ink hover:text-stonebg transition-colors">
+          <span>Get in Touch</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
         </a>
       </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="max-w-3xl mx-auto px-6 py-16 text-center">
-      <h2 class="font-heading text-3xl md:text-4xl font-bold text-ink mb-4">Come along with us</h2>
-      <p class="text-ink/70 text-lg mb-8 leading-relaxed">
-        Follow our progress as we secure our land and prepare for our 2028 debut. No spam—just quiet updates from the journey.
-      </p>
+    <!-- Newsletter Capture Section -->
+    <section id="newsletter" class="bg-morningsky/15 border-t border-stone-200 py-20">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <div class="max-w-xl mx-auto">
+          <span class="font-sans text-xs uppercase tracking-widest text-fieldgreen font-semibold">Field Notes</span>
+          <h2 class="font-sans text-3xl font-bold tracking-tight text-ink mt-2 mb-3">Come along with us</h2>
+          <p class="text-stone-600 font-serif italic mb-8">
+            Occasional, quiet updates from the field as we secure land, prepare soil, and build toward 2028. No clutter or spam.
+          </p>
 
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-        <input 
-          type="email" 
-          name="email" 
-          placeholder="Enter your email address" 
-          required
-          class="px-4 py-3 bg-white border border-ink/20 rounded-md focus:outline-none focus:ring-2 focus:ring-fieldgreen flex-grow font-serif text-ink placeholder:text-ink/40"
-        >
-        <button 
-          type="submit" 
-          class="px-6 py-3 bg-ink text-morningsky font-heading font-medium rounded-md hover:bg-fieldgreen transition-colors duration-200"
-        >
-          Subscribe
-        </button>
-      </form>
+          <!-- Integrated Formspree Form -->
+          <form 
+            action="https://formspree.io/f/xwlvgnyv" 
+            method="POST" 
+            class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+          >
+            <label for="email-address" class="sr-only">Email address</label>
+            <input 
+              type="email" 
+              name="email" 
+              id="email-address" 
+              required 
+              placeholder="Enter your email" 
+              class="w-full px-4 py-3 rounded border border-stone-300 bg-white text-ink placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-fieldgreen focus:border-transparent text-sm"
+            />
+            <button 
+              type="submit" 
+              class="px-6 py-3 rounded bg-fieldgreen text-stonebg font-sans font-semibold text-sm hover:bg-[#3d5539] transition-colors whitespace-nowrap"
+            >
+              Join us
+            </button>
+          </form>
+        </div>
+      </div>
     </section>
-
   </main>
 
   <!-- Footer -->
-  <footer class="bg-ink text-morningsky/70 py-12 px-6 border-t border-morningsky/10 text-sm">
-    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-6">
-      <div class="space-y-1 text-center sm:text-left">
-        <div class="font-heading font-bold text-morningsky text-base">Selah Farm LLC</div>
-        <p>Southeast Michigan — Macomb County</p>
+  <footer class="w-full border-t border-stone-200 bg-[#F9F8F6] py-12">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="text-center md:text-left">
+        <div class="font-sans font-bold text-sm tracking-wider text-ink">SELAH FARM LLC</div>
+        <p class="text-xs text-stone-500 font-serif italic mt-1">Southeast Michigan • Est. 2026 • Launching 2028</p>
       </div>
-      <div class="text-center sm:text-right space-y-1">
-        <p><a href="mailto:hello@selahfarmmi.com" class="hover:text-sungold transition-colors">hello@selahfarmmi.com</a></p>
-        <p>&copy; 2026 Selah Farm LLC. All rights reserved.</p>
+
+      <div class="flex items-center gap-6 font-sans text-xs text-stone-600">
+        <a href="mailto:hello@selahfarmmi.com" class="hover:text-fieldgreen transition-colors">hello@selahfarmmi.com</a>
+        <span>•</span>
+        <a href="https://selahfarmmi.com" class="hover:text-fieldgreen transition-colors">selahfarmmi.com</a>
+      </div>
+
+      <div class="text-xs text-stone-400 font-sans">
+        © 2026 Selah Farm LLC. All rights reserved.
       </div>
     </div>
   </footer>
